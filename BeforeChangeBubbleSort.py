@@ -7,32 +7,30 @@ def BubbleSort(a):
     
     n = len(a)
     
-    for i in range(n - 1):
+    for i in range(n):
         for j in range(1, n - i):
             if a[j - 1] > a[j]:
-                trade(a, j)    
-    print(i, "번째 완료됨")   
+                temp = a[j - 1]
+                a[j - 1] = a[j]
+                a[j] = temp    
     return a
-
-def trade(a, j):
-    temp = a[j - 1]
-    a[j - 1] = a[j]
-    a[j] = temp
-    return False
 
 def CreateRandomList():
     numList = []
-    for i in range(1, 2000):
-        number = random.randint(1, 2001)
+    for i in range(1, 5001):
+        number = random.randint(1, 5001)
         numList.append(number)
+    #f = open("새파일.txt", 'w')
+    #f.write(str(numList))
+    #f.close()
     return numList;
 
 def Main():
-    #data = CreateRandomList()
+    data = CreateRandomList()
     
-    f = open("새파일.txt", 'r')
-    data = list(f.readline())
-    f.close()
+    #f = open("새파일.txt", 'r')
+    #data = f.read().split(',')
+    #f.close()
 
     print("데이터 처리 시작")
 
