@@ -39,8 +39,8 @@ def Main():
     
     BubbleSort(data)
     
-    #print("정렬 후 자료")
-    #print (data)
+    print("정렬 후 자료")
+    print (data)
 
 Main()
 
